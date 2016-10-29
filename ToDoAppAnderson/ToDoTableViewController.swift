@@ -12,9 +12,10 @@ import UserNotifications
 class ToDosTableViewController: UITableViewController {
     
     var onlyIfComplete = false
-
+    var searchDisplayController: UISearchController
+    let searchController = UISearchController(searchResultsController: nil)
     
-
+    
     
     @IBAction func showOnlyComplete(_ sender: AnyObject) {
         onlyIfComplete = !onlyIfComplete
@@ -29,6 +30,14 @@ class ToDosTableViewController: UITableViewController {
         
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search"
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
     }
     
     
@@ -85,7 +94,7 @@ class ToDosTableViewController: UITableViewController {
         }
         return cell
     }
-  // takes empty space away when row is hidden
+    // takes empty space away when row is hidden
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if ToDoStore.shared.getToDo(indexPath.row, category: indexPath.section).completion == true && onlyIfComplete == false {
             return 0
@@ -159,15 +168,15 @@ class ToDosTableViewController: UITableViewController {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-
+    
     
     //MARK: - LOCAL NOTIFICATION FUNCTION
     func scheduleLocal() {
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
-        content.title = "Late wake up call"
-        content.body = "The early bird catches the worm, but the second mouse gets the cheese."
+        content.title = "Wake UP"
+        content.body = "Seize The Day."
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default()
@@ -236,4 +245,4 @@ class ToDosTableViewController: UITableViewController {
     }
     
 }
-   
+

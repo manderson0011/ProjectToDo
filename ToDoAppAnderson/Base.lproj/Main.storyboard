@@ -14,12 +14,12 @@
         <scene sceneID="htR-V2-lWD">
             <objects>
                 <tableViewController id="0yd-s3-828" customClass="ToDosTableViewController" customModule="ToDoAppAnderson" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="139" sectionHeaderHeight="28" sectionFooterHeight="28" id="plc-sd-Y8d">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" id="plc-sd-Y8d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableFooterView" contentMode="redraw" id="weu-rO-StR">
-                            <rect key="frame" x="0.0" y="230" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="194" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -27,27 +27,20 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoTableViewCell" rowHeight="138" id="zK3-8d-KpH" customClass="ToDoTableViewCell" customModule="ToDoAppAnderson" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="138"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoTableViewCell" rowHeight="102" id="zK3-8d-KpH" customClass="ToDoTableViewCell" customModule="ToDoAppAnderson" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="102"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zK3-8d-KpH" id="dTF-Wn-LlG">
-                                    <frame key="frameInset" width="375" height="138"/>
+                                    <frame key="frameInset" width="375" height="101"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Eq-AS-lYf">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Eq-AS-lYf">
+                                            <frame key="frameInset" minX="8" width="235" height="42"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="235" id="Srl-Cy-nOD"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                             <color key="textColor" red="0.66522823949999998" green="0.089356416750000001" blue="0.1327062621" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date : " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLI-Re-PkH">
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="90" id="MKx-CU-zMd"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/20/2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UH-gZ-1F0">
@@ -58,7 +51,8 @@
                                             <color key="textColor" red="0.66522823949999998" green="0.089356416750000001" blue="0.1327062621" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qQ-Ws-wmR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qQ-Ws-wmR">
+                                            <frame key="frameInset" minX="242" minY="-2" width="125" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="125" id="Ped-fL-WMB"/>
                                             </constraints>
@@ -66,18 +60,36 @@
                                             <color key="textColor" red="0.94765335321426392" green="0.19819983839988708" blue="0.1053246483206749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date : " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLI-Re-PkH">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="MKx-CU-zMd"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="9Eq-AS-lYf" secondAttribute="bottom" constant="51" id="3uv-vK-ef0"/>
+                                        <constraint firstItem="9Eq-AS-lYf" firstAttribute="leading" secondItem="rLI-Re-PkH" secondAttribute="leading" id="5LR-ol-OZr"/>
                                         <constraint firstItem="rLI-Re-PkH" firstAttribute="leading" secondItem="dTF-Wn-LlG" secondAttribute="leading" id="5Me-Lq-Jn5"/>
+                                        <constraint firstItem="rLI-Re-PkH" firstAttribute="bottom" secondItem="3UH-gZ-1F0" secondAttribute="bottom" id="6dv-hy-F0w"/>
                                         <constraint firstItem="3UH-gZ-1F0" firstAttribute="top" secondItem="9Eq-AS-lYf" secondAttribute="bottom" id="6tJ-zF-Scr"/>
+                                        <constraint firstItem="9Eq-AS-lYf" firstAttribute="top" secondItem="dTF-Wn-LlG" secondAttribute="top" id="BpG-SK-D5n"/>
+                                        <constraint firstItem="9Eq-AS-lYf" firstAttribute="leading" secondItem="dTF-Wn-LlG" secondAttribute="leadingMargin" id="Dei-Fy-LsW"/>
                                         <constraint firstItem="9Eq-AS-lYf" firstAttribute="leading" secondItem="dTF-Wn-LlG" secondAttribute="leadingMargin" id="Ifs-IQ-4TT"/>
+                                        <constraint firstItem="rLI-Re-PkH" firstAttribute="top" secondItem="3UH-gZ-1F0" secondAttribute="top" id="K3u-8N-QLL"/>
                                         <constraint firstItem="3UH-gZ-1F0" firstAttribute="top" secondItem="3qQ-Ws-wmR" secondAttribute="bottom" constant="2" id="Mik-vF-RxE"/>
                                         <constraint firstItem="3qQ-Ws-wmR" firstAttribute="trailing" secondItem="3UH-gZ-1F0" secondAttribute="trailing" id="R6a-TG-0xw"/>
                                         <constraint firstItem="rLI-Re-PkH" firstAttribute="top" secondItem="dTF-Wn-LlG" secondAttribute="topMargin" constant="36" id="TLB-QA-8F6"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="3UH-gZ-1F0" secondAttribute="bottom" constant="37" id="TsP-af-QlI"/>
                                         <constraint firstItem="3qQ-Ws-wmR" firstAttribute="top" secondItem="dTF-Wn-LlG" secondAttribute="top" id="b5f-DJ-iFT"/>
+                                        <constraint firstItem="3UH-gZ-1F0" firstAttribute="leading" secondItem="rLI-Re-PkH" secondAttribute="trailing" constant="91" id="g02-dh-Lvf"/>
+                                        <constraint firstItem="rLI-Re-PkH" firstAttribute="top" secondItem="dTF-Wn-LlG" secondAttribute="topMargin" constant="31" id="glF-Kk-a90"/>
                                         <constraint firstItem="3qQ-Ws-wmR" firstAttribute="trailing" secondItem="dTF-Wn-LlG" secondAttribute="trailingMargin" id="kgy-0j-siS"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="rLI-Re-PkH" secondAttribute="bottom" constant="38" id="lBD-qB-FUm"/>
+                                        <constraint firstItem="9Eq-AS-lYf" firstAttribute="bottom" secondItem="3qQ-Ws-wmR" secondAttribute="bottom" id="mNS-tq-K5B"/>
+                                        <constraint firstItem="3qQ-Ws-wmR" firstAttribute="top" secondItem="dTF-Wn-LlG" secondAttribute="topMargin" constant="-10" id="nWk-nb-z3l"/>
                                         <constraint firstItem="9Eq-AS-lYf" firstAttribute="centerY" secondItem="3qQ-Ws-wmR" secondAttribute="centerY" id="oRy-uM-FIq"/>
                                         <constraint firstItem="3UH-gZ-1F0" firstAttribute="leading" secondItem="rLI-Re-PkH" secondAttribute="trailing" constant="99" id="w8e-9d-bWB"/>
                                     </constraints>
