@@ -65,7 +65,8 @@
         }
         return priority + 1.0
     }
-    // lets us save this in one line of code
+    
+ 
     
     func save(){
         NSKeyedArchiver.archiveRootObject(toDos, toFile: archiveFilePath())

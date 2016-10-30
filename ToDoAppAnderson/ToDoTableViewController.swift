@@ -8,13 +8,14 @@
 
 import UIKit
 import UserNotifications
+import UserNotificationsUI
 
 class ToDosTableViewController: UITableViewController{
     
     var onlyIfComplete = false
     var searchController = UISearchController(searchResultsController: nil)
     var filteredToDo: [Category] = []
-    
+ 
     @IBAction func showOnlyComplete(_ sender: AnyObject) {
         onlyIfComplete = !onlyIfComplete
         tableView.reloadData()
@@ -23,12 +24,7 @@ class ToDosTableViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-    
-        //      navigationItem.Toolbar = UIBarButtonItem(title: "Register", style: .plain, target: self, action: #selector(registerLocal))
-        //       navigationItem.Toolbar = UIBarButtonI tem(title: "Schedule", style: .plain, target: self, action: #selector(scheduleLocal))
-
         
                 searchController.dimsBackgroundDuringPresentation = false
                 searchController.searchBar.sizeToFit()
@@ -36,6 +32,7 @@ class ToDosTableViewController: UITableViewController{
                 searchController.searchBar.placeholder = "Search"
                 definesPresentationContext = true
                 tableView.tableHeaderView = searchController.searchBar
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -152,27 +149,6 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
     // Return false if you do not want the item to be re-orderable.
     return true
-}
-
-
-//MARK: - LOCAL NOTIFICATION FUNCTION
-    func scheduleLocal() {
-        let center = UNUserNotificationCenter.current()
-    
-        let content = UNMutableNotificationContent()
-        content.title = "Wake UP"
-        content.body = "Seize The Day."
-        content.categoryIdentifier = "alarm"
-        content.userInfo = ["customData": "fizzbuzz"]
-        content.sound = UNNotificationSound.default()
-    
-        var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 30
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-    
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        center.add(request)
 }
 
 
