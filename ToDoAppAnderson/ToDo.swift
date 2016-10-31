@@ -48,7 +48,7 @@ class ToDo: NSObject, NSCoding{
         self.dueDate = dueDate
         self.completion = completion
         self.priority = priority
-       
+        
         
     }
     
@@ -61,7 +61,7 @@ class ToDo: NSObject, NSCoding{
         self.completion = aDecoder.decodeBool(forKey: completionKey)
         self.priority = aDecoder.decodeDouble(forKey: priorityKey)
         
-     
+        
     }
     func encode( with aCoder: NSCoder){
         aCoder.encode(title, forKey:titleKey)

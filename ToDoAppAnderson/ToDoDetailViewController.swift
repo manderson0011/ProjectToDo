@@ -19,7 +19,7 @@ class ToDoDetailViewController: UIViewController  {
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var completionSwitch: UISwitch!
     
-
+    
     
     var gestureRecognizer: UITapGestureRecognizer!
     

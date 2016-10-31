@@ -10,12 +10,12 @@ import UIKit
 
 
 
-// MARK: - Extension to add page for categories. 
+// MARK: - Extension to add page for categories.
 
-class Category { 
-//    static let Categories = categories
+class Category {
+    //    static let Categories = categories
     var todos = [[]]
     let todo = [0] [0]
-
-
- }
+    
+    
+}
