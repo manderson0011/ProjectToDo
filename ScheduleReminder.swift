@@ -76,16 +76,15 @@ class ScheduleReminderViewController: UIViewController, UNUserNotificationCenter
                 }
                 
             }
-            
         }
+       
+//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    if segue.identifier == "scheduleToDoSegue" {
+//    _ = segue.destination as! ScheduleReminderViewController
+//        
+//        
         
-        //            override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //                if segue.identifier == "scheduleToDoSegue" {
-        //                    let toDoDetailVC = segue.destination as! ScheduleReminderViewController
-        //
-        //
         
-    }
     
-}
-
+        }
+    }

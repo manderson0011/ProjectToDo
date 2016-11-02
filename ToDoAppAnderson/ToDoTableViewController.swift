@@ -81,9 +81,9 @@ class ToDosTableViewController: UITableViewController{
         
         //MARK:  switch for complete:
         
-        if onlyIfComplete == false {
+        if !onlyIfComplete {
             
-            if cell.toDo.completion == true {
+            if cell.toDo.completion  {
                 cell.isHidden = true
             }
         }
